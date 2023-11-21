@@ -9,8 +9,13 @@ import java.util.List;
 
 @Schema
 public record ReloadBIWBQModel(
-        @Parameter(required = true, example = "2022-01-01 00:00:00") String loadFrom,
-        @Parameter(required = true, example = "2022-01-01 00:00:00") String loadTo,
-        @Parameter(required = true , in = ParameterIn.QUERY, array = @ArraySchema)List<String> targetObject,
-        @Parameter(required = true) String deltaLoadRefObject) {
+        @Parameter(required = true, example = "2022-01-01 00:00:00")
+        String loadFrom,
+        @Parameter(required = true, example = "2022-01-01 00:00:00")
+        String loadTo,
+        @Parameter(required = true , in = ParameterIn.QUERY, array = @ArraySchema)
+        List<String> targetObject,
+        @Parameter(required = true)
+        String deltaLoadRefObject){
+
 }
